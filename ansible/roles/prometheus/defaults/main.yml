@@ -67,7 +67,7 @@ prometheus_services:
       prometheus_alertmanager_external:
         enabled: "{{ enable_prometheus_alertmanager | bool }}"
         mode: "http"
-        external: true
+        external: "{{ enable_prometheus_alertmanager_external | bool }}"
         port: "{{ prometheus_alertmanager_port }}"
         auth_user: "{{ prometheus_alertmanager_user }}"
         auth_pass: "{{ prometheus_alertmanager_password }}"
