@@ -88,6 +88,7 @@ octavia_database_shard:
 # Docker
 ####################
 octavia_tag: "{{ openstack_tag }}"
+docker_namespace: stackhpc-dev
 
 octavia_api_image: "{{ docker_registry ~ '/' if docker_registry else '' }}{{ docker_namespace }}/octavia-api"
 octavia_api_tag: "{{ octavia_tag }}"
